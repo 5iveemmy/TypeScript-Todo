@@ -1,10 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
+import { TodoListItem } from "./TodoListItem";
+
+const initialTodos: Todo[] = [
+  {
+    text: "Walk the dog",
+    complete: false,
+  },
+  {
+    text: "Write app",
+    complete: true,
+  },
+];
 
 function App() {
+  const [todos, setTodos] = useState(initialTodos);
+
+  const toggleTodo = (selectedTodo: Todo) => {
+    const newTodos = todos.map((todo) => {
+      if (todo === selectedTodo) {
+        return {
+          ...todo,
+          complete: !todo.complete,
+        };
+      }
+      return todo;
+    });
+    setTodos(newTodos);
+  };
   return (
-    <div className="App">
-      <h1>Type</h1>
-    </div>
+    <ul>
+      <TodoListItem todo={todos[0]} toggleTodo={toggleTodo} />
+      <TodoListItem todo={todos[1]} toggleTodo={toggleTodo} />
+    </ul>
   );
 }
 
