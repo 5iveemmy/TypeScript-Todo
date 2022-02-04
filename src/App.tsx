@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AddTodoForm } from "./components/Add/AddTodoForm";
+import { AddTodoForm } from "./components/AddTodoForm";
 import { TodoList } from "./components/TodoList";
 
 const initialTodos: Todo[] = [
