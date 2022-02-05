@@ -1,9 +1,14 @@
 import styled, { keyframes } from "styled-components";
 
+export const Header = styled.h1`
+  text-align: center;
+  padding-bottom: 1rem;
+`;
+
 export const ToDoForm = styled.form`
   display: flex;
   justify-content: space-between;
-  padding-bottom: 20px;
+  padding-bottom: 12px;
 `;
 
 export const ToDoInput = styled.input`
@@ -12,7 +17,7 @@ export const ToDoInput = styled.input`
   color: white;
   outline: none;
   width: 19rem;
-  padding: 10px;
+  padding: 13px;
   background-color: #2d2d2d;
 `;
 
@@ -33,13 +38,18 @@ export const List = styled.div``;
 
 export const ForToDoList = styled.div``;
 
-export const Items = styled.div``;
+export const Items = styled.div`
+  background-color: #2d2d2d;
+  margin-top: 1rem;
+  padding: 7px;
+  border-radius: 5px;
+`;
 
 export const ItemsLabel = styled.label`
   position: relative;
   display: inline-block;
   cursor: pointer;
-  margin: 0.6em 1em;
+  margin: 0.7em 2em;
 `;
 
 const rotate = keyframes`
@@ -66,7 +76,7 @@ export const Indicator = styled.div`
   background: #ff4c6a;
   position: absolute;
   top: 0em;
-  left: -1.6em;
+  left: -2em;
   border: none;
   border-radius: 0.2em;
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { List } from "../styles/styles";
+import { Header, List } from "../styles/styles";
 import { AddTodoForm } from "./AddTodoForm";
 import { TodoList } from "./TodoList";
 
@@ -36,6 +36,7 @@ const TodoApp = () => {
   };
   return (
     <>
+      <Header>ToDo App</Header>
       <List>
         <AddTodoForm addTodo={addTodo} />
         <TodoList todos={todos} toggleTodo={toggleTodo} />
