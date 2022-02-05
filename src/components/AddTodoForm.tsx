@@ -16,6 +16,7 @@ export const AddTodoForm: React.FC<Props> = ({ addTodo }) => {
         onChange={(e) => {
           setText(e.target.value);
         }}
+        placeholder="Enter a Todo..."
       />
       <AddButton
         type="submit"
