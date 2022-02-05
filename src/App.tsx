@@ -3,8 +3,10 @@ import TodoApp from "./components/TodoApp";
 import { Container, GlobalStyle } from "./styles/global";
 
 const ForApp = styled.div`
-  background-color: #0a0707;
-  color: #fff;
+  background-color: #2d2d2d;
+  display: flex;
+  height: 100%;
+  justify-content: center;
 `;
 
 function App() {
