@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "../styles/global";
+import { ForToDoList } from "../styles/styles";
 import { TodoListItem } from "./TodoListItem";
 
 interface Props {
@@ -9,10 +9,10 @@ interface Props {
 
 export const TodoList: React.FC<Props> = ({ todos, toggleTodo }) => {
   return (
-    <ul>
+    <ForToDoList>
       {todos.map((todo) => (
         <TodoListItem key={todo.text} todo={todo} toggleTodo={toggleTodo} />
       ))}
-    </ul>
+    </ForToDoList>
   );
 };

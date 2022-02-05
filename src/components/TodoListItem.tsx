@@ -1,4 +1,5 @@
 import React from "react";
+import { Items, ItemsInput, ItemsLabel } from "../styles/styles";
 
 interface Props {
   todo: Todo;
@@ -7,11 +8,11 @@ interface Props {
 
 export const TodoListItem: React.FC<Props> = ({ todo, toggleTodo }) => {
   return (
-    <li>
-      <label
+    <Items>
+      <ItemsLabel
         style={{ textDecoration: todo.complete ? "line-through" : undefined }}
       >
-        <input
+        <ItemsInput
           type="checkbox"
           checked={todo.complete}
           onClick={() => {
@@ -19,7 +20,7 @@ export const TodoListItem: React.FC<Props> = ({ todo, toggleTodo }) => {
           }}
         />{" "}
         {todo.text}
-      </label>
-    </li>
+      </ItemsLabel>
+    </Items>
   );
 };
