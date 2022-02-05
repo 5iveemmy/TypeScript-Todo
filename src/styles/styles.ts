@@ -60,7 +60,7 @@ export const ItemsInput = styled.input`
   z-index: -1;
 `;
 
-export const ItemsSpan = styled.div`
+export const Indicator = styled.div`
   width: 1.4em;
   height: 1.5em;
   background: #ff4c6a;
@@ -69,10 +69,6 @@ export const ItemsSpan = styled.div`
   left: -1.6em;
   border: none;
   border-radius: 0.2em;
-
-  ${ItemsInput}:not(:disabled):checked & {
-    background: #d1d1d1;
-  }
 
   ${ItemsLabel}:hover & {
     background: #f7748a;
@@ -95,9 +91,5 @@ export const ItemsSpan = styled.div`
     animation-name: ${rotate};
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
-  }
-
-  &::disabled {
-    cursor: not-allowed;
   }
 `;

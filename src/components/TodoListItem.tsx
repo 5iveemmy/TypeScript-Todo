@@ -1,5 +1,5 @@
 import React from "react";
-import { Items, ItemsInput, ItemsLabel, ItemsSpan } from "../styles/styles";
+import { Items, ItemsInput, ItemsLabel, Indicator } from "../styles/styles";
 
 interface Props {
   todo: Todo;
@@ -19,7 +19,7 @@ export const TodoListItem: React.FC<Props> = ({ todo, toggleTodo }) => {
             toggleTodo(todo);
           }}
         />
-        <ItemsSpan></ItemsSpan>
+        <Indicator></Indicator>
         {todo.text}
       </ItemsLabel>
     </Items>
