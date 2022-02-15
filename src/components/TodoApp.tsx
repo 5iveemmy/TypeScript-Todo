@@ -5,7 +5,7 @@ import { TodoList } from "./TodoList";
 
 const initialTodos: Todo[] = [
   {
-    text: "Walk the dog",
+    text: "Go to gym",
     complete: false,
   },
   {
